@@ -1,0 +1,13 @@
+.main-btn {
+    // background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+    // --mouse-x: 19.8594;
+    // --mouse-y: 85.4167;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 20px;
+    border-radius: 8px;
+    border: none;
+    background:linear-gradient(to left,#8080F7 0%,#856FF6 50%,#475CE7 100%);
+}

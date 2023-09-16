@@ -1,0 +1,48 @@
+@import '../../../assets/styles/setup/variables';
+
+.stay-preview {
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #717171;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      color: #222222;
+      .loc {
+        font-weight: 500;
+        font-size: 14px;
+      }
+      
+    }
+
+    .name {
+      width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 600;
+      color: black;
+      
+    }
+
+    .price {
+      span {
+        color: #222222;
+        font-weight: 600;
+      }
+    }
+    .rate {
+      display: flex;
+      gap: 5px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.stay-preview:hover {
+  cursor: pointer;
+}

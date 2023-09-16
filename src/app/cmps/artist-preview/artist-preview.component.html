@@ -1,0 +1,16 @@
+<section class="stay-preview">
+    <artist-img-carousel [artist]="artist"></artist-img-carousel>
+    <div class="details">
+      <div class="top">
+        <div class="loc">{{artist.loc.address}}</div>
+      </div>
+      <div class="name">{{artist.name}}</div>
+      <!-- <div>{{artist.roomType}}</div> -->
+      <div class="price"><span>R$ {{artist.price}}  </span>/ noite</div>
+      <div class="rate">
+        <fa-icon [icon]="faStar"></fa-icon>
+        <span>{{getRateAvg()}}</span>
+      </div>
+    </div>
+  </section>
+  

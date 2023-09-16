@@ -1,0 +1,10 @@
+<ul *ngIf="artists?.length" class="stay-list">
+    <li *ngFor="let artist of artists">
+      <artist-preview [routerLink]="['/find-artist', artist._id]" [artist]="artist"></artist-preview>
+    </li>
+  </ul>
+  <div *ngIf="!artists?.length" class="empty-list">
+    <h2>No results were found for this search</h2>
+    <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631046/stay/empty-list_ykhfmu.webp" alt="">
+  </div>
+  

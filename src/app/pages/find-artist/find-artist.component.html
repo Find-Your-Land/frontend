@@ -1,0 +1,19 @@
+<section class="stay-index">
+    <app-header-artist [isShowFilter]="true"></app-header-artist>
+    <stay-filter></stay-filter>
+    <main *ngIf="!this.loader.getLoading() || isLoadArtist" class="main-layout">
+      <div #elFooter (window:scroll)="onPageScroll()">
+        <artist-list *ngIf="!isShowMap" [artists]="artists$ | async"></artist-list>
+        <skeleton-loader *ngIf="this.loader.getLoading() && isLoadArtist"></skeleton-loader>
+      </div>
+      <!-- <app-footer *ngIf="!isShowMap" class="full"></app-footer> -->
+    </main>
+  
+    <a *ngIf="isShowScroller" (click)="onPageUp()" class="scroller-up"><span
+        class="material-symbols-outlined">expand_less</span></a>
+    <skeleton-loader *ngIf="this.loader.getLoading()"></skeleton-loader>
+    <a *ngIf="isShowClearBtn" (click)="onClearFilter()" loading="eager" class="clear-filter">
+      <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631046/stay/clear-filter_cbxntm.png" alt="">
+    </a>
+  </section>
+  
